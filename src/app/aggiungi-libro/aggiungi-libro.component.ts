@@ -19,7 +19,7 @@ export class AggiungiLibroComponent implements OnInit {
      }
 
   ngOnInit() {}
-  
+  s
   onSubmit() {
     this.libroServizioService.save(this.libro).subscribe(result => this.gotoBookList());
   }
