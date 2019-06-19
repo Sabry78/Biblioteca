@@ -1,0 +1,24 @@
+<div class="card my-5">
+  <div class="card-body">
+    <h2>LOGIN</h2>
+<br>
+    <form>
+      <div class="form-group">
+        <!-- [(ngModel)] corrisponde allo user definito in login component è un two binding idem  per password-->
+        <br>User &nbsp;<i class="fas fa-user fa-1x"> </i> <input class="form-control" type="text" name="username" [(ngModel)]="username">
+        
+      </div>
+      <div class="form-group">
+     <br>  Password &nbsp;<i class="fas fa-key fa-1x"> </i> 
+     <input class="form-control" type="password" name="password" [(ngModel)]="password">
+      </div>
+      <div class="form-group" >
+          email : <input class="form-control" type="password" name="password" [(ngModel)]="email">
+        </div>
+      <br>
+      <button (click)=checkLogin() class="btn btn-outline-success">
+        Login
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="card my-5">
+    <div class="card-body">
+      <h2>{{cliente.lastName}} {{cliente.firstName}}</h2>
+      <br>
+      <table class="table details-table mb-3">
+        <tbody>
+          <tr>
+            <th>Address: </th>
+            <td>{{cliente.address}}</td>
+          </tr>
+          <tr>
+            <th>Email: </th>
+            <td>{{cliente.email}}</td>
+          </tr>
+          <tr>
+            <th>Tel. Number: </th>
+            <td>{{cliente.telephoneNumber}}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <!-- buttons -->
+    <!--  <button class="btn btn-info mr-2" (click)="goToInvoices(customer)">Invoices</button>-->
+      <button class="btn btn-secondary" (click)="goBack()">Back</button>
+      
+    </div>
+  </div>

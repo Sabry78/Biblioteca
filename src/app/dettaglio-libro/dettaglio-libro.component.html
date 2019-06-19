@@ -1,0 +1,27 @@
+<div class="card my-5">
+    <div class="card-body">
+      <h2>{{libro.name}}</h2>
+      <br>
+      <table class="table details-table">
+        <tbody>
+          <tr>
+            <th>Author: </th>
+            <td>{{libro.author}}</td>
+          </tr>
+          <tr>
+            <th>Genre: </th>
+            <td>{{libro.genre}}</td>
+          </tr>
+          <tr>
+            <th>Year: </th>
+            <td>{{libro.year}}</td>
+          </tr>
+          <tr>
+            <th>Price: </th>
+            <td>{{libro.price}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-secondary mt-3" (click)="goBack()">Back</button>
+    </div>
+  </div>

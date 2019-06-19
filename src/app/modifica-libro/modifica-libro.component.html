@@ -1,0 +1,56 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #bookForm="ngForm">
+  
+        <div class="form-row">
+  
+          <div class="col">
+            <label for="name">Name</label>
+            <input type="text" [(ngModel)]="libro.name" class="form-control" id="name" name="name"
+              placeholder="Inserisci libro" required #name="ngModel">
+              <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
+          </div>    
+     </div>
+     
+      <div class="form-row">
+          <div class="col">
+            <label for="author">Author</label>
+            <input type="text" [(ngModel)]="libro.author" class="form-control" id="author" name="author"
+              placeholder="Enter author" required #author="ngModel">
+            <div [hidden]="!author.pristine" class="alert alert-danger">Author is required</div>
+          </div>
+          
+        </div>
+  
+        <div class="form-row">
+  
+          <div class="col">
+            <label for="genre">Genre</label>
+            <input type="text" [(ngModel)]="libro.genre" class="form-control" id="genre" name="genre"
+              placeholder="Enter genre" required #genre="ngModel">
+            <div [hidden]="!genre.pristine" class="alert alert-danger">Genre is required</div>
+          </div>
+          
+          <div class="col">
+            <label for="year">Year</label>
+            <input type="text" [(ngModel)]="libro.year" class="form-control" id="year" name="year" placeholder="Enter year"
+              required #year="ngModel">
+            <div [hidden]="!year.pristine" class="alert alert-danger">Year is required</div>
+          </div>
+  
+        </div>
+  
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="text" [(ngModel)]="libro.price" class="form-control" id="price" name="price"
+            placeholder="Enter price" required #price="ngModel">
+          <div [hidden]="!price.pristine" class="alert alert-danger">Price is required</div>
+        </div>
+  
+        <!-- buttons -->
+        <button type="submit" [disabled]="!bookForm.form.valid" class="btn btn-warning mr-2">Edit</button>
+        <button class="btn btn-secondary" (click)="goBack()">Cancel</button>
+  
+      </form>
+    </div>
+  </div>

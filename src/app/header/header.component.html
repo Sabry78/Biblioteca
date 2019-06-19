@@ -1,0 +1,19 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div><a href="" class="navbar-brand">HOME</a></div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+     
+        <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/" class="nav-link">lista libri</a></li>
+        <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/AggiungiLibro" class="nav-link">Aggiungi libro</a></li>
+        <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+        <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a></li>
+      
+      </ul>
+      <a routerLink="/logout"><button class="btn btn-danger btn-sm">Logout</button></a>
+    </div>
+
+  </nav>
+
+</header>

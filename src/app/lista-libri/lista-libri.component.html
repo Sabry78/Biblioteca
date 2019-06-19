@@ -1,0 +1,49 @@
+
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Number </th>
+          <th scope="col">author</th>
+          <th scope="col">genre</th>
+          <th scope="col">year</th>
+          <th scope="col">price</th>
+          
+          
+          <th scope="col" style="width: 1px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+       
+         <tr *ngFor="let libro of libri">
+          <td (click)="goToBookDetails(libro)">{{ libro.name }}</td>
+          <td (click)="goToBookDetails(libro)">{{ libro.number }}</td>
+          <td (click)="goToBookDetails(libro)">{{ libro.author }}</td>
+          <td (click)="goToBookDetails(libro)">{{ libro.genre }}</td>
+          <td (click)="goToBookDetails(libro)">{{ libro.year }}</td>
+          <td (click)="goToBookDetails(libro)">{{ libro.price }}</td>
+        
+     
+
+          <td style="display: flex;">
+        <button class="btn btn-danger mr-2" (click)="delete(libro)"> Delete </button>
+          <!--<i class="fa fa-trash fa-2x" aria-hidden="true" style="color:rgb(207, 5, 5)" (click)="delete(libro)"></i>-->
+
+            &nbsp;
+          <button class="btn btn-warning" (click)="goToBookEditor(book)"> Edit </button>
+            <!--  <i class="far fa-edit fa-2x" style="color:rgb(71, 108, 209)" (click)="goToBookEditor(book)"></i>-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- buttons -->
+    <a routerLink="/AggiungiLibro" class="btn btn-primary mr-2">Add Book</a>
+    <button class="btn btn-secondary" (click)="goBack()">Back</button>
+
+  </div>
+
+
+</div>
